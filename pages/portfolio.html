@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Tato Studio</title>
+    <meta name="description" content="Explora las colecciones fotográficas de Tato Studio.">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../assets/img-tato-studio.png" alt="Tato Studio">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="about.html">Acerca de mí</a></li>
+                <li><a href="portfolio.html" class="active">Portafolio</a></li>
+                <li><a href="contact.html">Contáctame</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portfolio-hero">
+            <h1 class="portfolio-main-title">Mi Portafolio</h1>
+            <p class="portfolio-description">
+                Las historias no se cuentan, se ven. Cada imagen es un fragmento de tiempo capturado en su estado más puro. Te invito a recorrer este espacio y a descubrir el mundo a través de mi lente.
+            </p>
+        </section>
+
+        <section class="categories-selection-section">
+            <div class="categories-grid">
+                
+                <div class="category-card" data-gallery="arte">
+                    <div class="category-card-inner">
+                        <img src="../assets/artes1.jpeg" alt="Colección de Arte">
+                        <div class="category-card-overlay">
+                            <h2>artes</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card" data-gallery="wedding">
+                    <div class="category-card-inner">
+                        <img src="../assets/boda1.jpg" alt="Colección de Bodas">
+                        <div class="category-card-overlay">
+                            <h2>bodas</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card card-wide" data-gallery="restaurantes">
+                    <div class="category-card-inner">
+                        <img src="../assets/rest1.jpeg" alt="Colección de Restaurantes">
+                        <div class="category-card-overlay">
+                            <h2>Restaurantes</h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div id="gallery-popup" class="gallery-popup-overlay">
+            <button class="close-popup-btn">&times;</button>
+            
+            <button class="nav-popup-btn prev-btn">&#10094;</button>
+
+            <div class="popup-viewer-container">
+                <img id="popup-active-img" src="" alt="Visor de fotos">
+            </div>
+
+            <button class="nav-popup-btn next-btn">&#10095;</button>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-logo">
+            <p>&copy; 2026 Julián Garzón. Todos los derechos reservados.</p>
+        </div>
+        <nav class="social_links">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/caroll-molina-jerez-60795697/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/tato_vision_?igsh=MXIzczZtYWhrdHhmYQ==" target="_blank">Instagram</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="../js/portafolio.js"></script>
+</body>
+</html>

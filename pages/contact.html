@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctame - Tato Studio</title>
+    <meta name="description" content="Ponte en contacto con Tato Studio para agendar tu próxima sesión fotográfica.">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../assets/img-tato-studio.png" alt="Tato Studio">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="about.html">Acerca de mí</a></li>
+                <li><a href="portfolio.html">Portafolio</a></li>
+                <li><a href="contact.html" class="active">Contáctame</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-main-wrapper">
+        <section class="contact-hero-section">
+            
+            <div class="contact-glass-container">
+                
+                <div class="contact-form-block">
+                    <h2>Creemos juntos historias que perduren en el tiempo.</h2>
+                    <p class="subtitle-form">Escríbeme para cotizar tu próxima sesión.</p>
+                    
+                    <form id="studio-contact-form" novalidate>
+                        <div class="input-group-custom">
+                            <label for="fullName">Nombre Completo</label>
+                            <input type="text" id="fullName" placeholder="Tu Nombre">
+                            <span class="error-msg" id="error-name">El nombre es obligatorio</span>
+                        </div>
+
+                        <div class="input-group-custom">
+                            <label for="emailAddress">Dirección de Email</label>
+                            <input type="email" id="emailAddress" placeholder="correo@dominio.com">
+                            <span class="error-msg" id="error-email">Ingresa un correo electrónico válido</span>
+                        </div>
+
+                        <div class="input-group-custom">
+                            <label for="eventType">Tipo de Evento</label>
+                            <select id="eventType">
+                                <option value="">Selecciona un tipo de evento</option>
+                                <option value="wedding">Bodas</option>
+                                <option value="restaurantes">Restaurantes</option>
+                                <option value="arte">Arte / Celebraciones</option>
+                            </select>
+                            <span class="error-msg" id="error-type">Selecciona un tipo de servicio</span>
+                        </div>
+
+                        <div class="input-group-custom">
+                            <label for="userMessage">Tu Mensaje</label>
+                            <textarea id="userMessage" rows="4" placeholder="Dime sobre tu visión, las fechas y la ubicación..."></textarea>
+                            <span class="error-msg" id="error-message">Por favor, escribe un breve mensaje</span>
+                        </div>
+
+                        <button type="submit" class="btn-submit-form">Enviar Consulta</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-block">
+                    <div class="info-item">
+                        <span>Ubicación</span>
+                        <p>Bogotá / Colombia</p>
+                    </div>
+
+                    <div class="info-item">
+                        <span>Email</span>
+                        <p><a href="mailto:carollmolina1993@gmail.com">carollmolina1993@gmail.com</a></p>
+                    </div>
+
+                    <div class="info-item">
+                        <span>Telefono</span>
+                        <p>+57 320 4876248</p>
+                    </div>
+
+                    <div class="info-item">
+                        <span>Sigueme en mis redes</span>
+                        <div class="contact-social-links">
+                            <a href="https://www.linkedin.com/in/caroll-molina-jerez-60795697/" target="_blank">LinkedIn</a>
+                            <a href="https://www.instagram.com/tato_vision_?igsh=MXIzczZtYWhrdHhmYQ==" target="_blank">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-logo">
+            <p>&copy; 2026 Julián Garzón. Todos los derechos reservados.</p>
+        </div>
+        <nav class="social_links">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/caroll-molina-jerez-60795697/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/tato_vision_?igsh=MXIzczZtYWhrdHhmYQ==" target="_blank">Instagram</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="../js/contact-validation.js"></script>
+</body>
+
+</html>
