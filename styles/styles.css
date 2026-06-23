@@ -380,7 +380,85 @@ a {
     .main-header {
         flex-direction: column;
         gap: 15px;
+        padding: 15px 6%;
+        flex-direction: row !important; /* Mantiene logo y botón en la misma línea */
+        justify-content: space-between;
     }
+
+    /* Ocultar el menú normal y transformarlo en cortina flotante */
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Oculto completamente a la derecha */
+        width: 100%;
+        height: 100vh;
+        background-color: var(--primary-color); /* Conserva tu beige característico */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    /* Cuando el menú tenga la clase .open, se desliza hacia la pantalla */
+    .main-nav.open {
+        right: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Apila los enlaces de arriba a abajo */
+        align-items: center;
+        gap: 40px;
+    }
+
+    .main-nav a {
+        font-size: 20px; /* Letra más grande para facilitar el toque táctil */
+        color: var(--text-color);
+    }
+
+    /* --- DISEÑO DEL BOTÓN HAMBURGUESA --- */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1000; /* Siempre por encima de la cortina */
+        padding: 0;
+    }
+
+    .menu-toggle span {
+        width: 100%;
+        height: 2px;
+        background-color: var(--text-menu);
+        transition: all 0.3s ease;
+        transform-origin: left center;
+    }
+
+    /* Animación matemática para transformar las 3 líneas en una "X" al abrir */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translateY(-2px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translateY(2px);
+    }
+}
+
+/* Ocultar el botón hamburguesa por defecto en pantallas de escritorio */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
     
     .carousel-overlay h1 {
         font-size: 2.2rem;
@@ -403,7 +481,7 @@ a {
         gap: 20px;
         text-align: center;
     }
-}
+
 
 /* PAGINA ACERCA DE MI */
 
